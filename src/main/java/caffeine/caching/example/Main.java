@@ -1,4 +1,4 @@
-package caffeine.example.writethroughcache;
+package caffeine.caching.example;
 
 public class Main {
 
