@@ -19,6 +19,7 @@ mainClassName = 'caffeine.caching.example.Main'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
