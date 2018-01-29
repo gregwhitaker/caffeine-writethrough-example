@@ -35,3 +35,4 @@ flyway {
 }
 clean.dependsOn(flywayClean)
 build.dependsOn(flywayMigrate)
+run.dependsOn(build)

@@ -12,7 +12,26 @@ This example requires a running PostgreSQL database. Start a PostgreSQL instance
 ## Running the Example
 The example can be run using the following Gradle command:
 
-    $ ./gradlew run
+    $ ./gradlew clean run
+    
+If successful, you will see the following in the terminal:
+
+    [main] INFO caffeine.caching.example.Main - Starting the Caffeine Write-Through Cache Example
+    [main] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+    [main] INFO com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (Method org.postgresql.jdbc.PgConnection.getNetworkTimeout() is not yet implemented.)
+    [main] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+    [main] INFO caffeine.caching.example.Main - Creating database connection: jdbc:postgresql://localhost:5432/postgres
+    [main] INFO caffeine.caching.example.Main - Adding 1: This is the number 1
+    [main] INFO caffeine.caching.example.Main$DatabaseCacheWriter - Adding cache value to database: [key: 1, value: This is the number 1]
+    [main] INFO caffeine.caching.example.Main - Adding 2: This is the number 2
+    [main] INFO caffeine.caching.example.Main$DatabaseCacheWriter - Adding cache value to database: [key: 2, value: This is the number 2]
+    [main] INFO caffeine.caching.example.Main - Adding 3: This is the number 3
+    [main] INFO caffeine.caching.example.Main$DatabaseCacheWriter - Adding cache value to database: [key: 3, value: This is the number 3]
+    [main] INFO caffeine.caching.example.Main - Getting `1` From Cache: This is the number 1
+    [main] INFO caffeine.caching.example.Main - Getting `2` From Cache: This is the number 2
+    [main] INFO caffeine.caching.example.Main - Getting `3` From Cache: This is the number 3
+    [main] INFO caffeine.caching.example.Main - Loading value from database: [key: 4]
+    [main] INFO caffeine.caching.example.Main - Getting `4` From Cache: This is the number 4
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/caffeine-writethrough-example/issues).
