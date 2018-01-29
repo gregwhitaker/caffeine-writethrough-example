@@ -1,8 +1,21 @@
 # caffeine-writethrough-example
+[![Build Status](https://travis-ci.org/gregwhitaker/caffeine-writethrough-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/caffeine-writethrough-example)
 
 An example of implementing a write-through cache with [Caffeine](https://github.com/ben-manes/caffeine).
 
+## Prerequisites
+This example requires a running PostgreSQL database. Start a PostgreSQL instance as a Docker container using the following commands:
 
+        $ docker pull postgres
+        $ docker run --name=proteus-db -p 5432:5432 -d postgres
+
+## Running the Example
+The example can be run using the following Gradle command:
+
+    $ ./gradlew run
+
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/caffeine-writethrough-example/issues).
 
 ## License
 MIT License
