@@ -24,6 +24,8 @@ repositories {
 dependencies {
     compile 'org.postgresql:postgresql:42.1.4'
     compile 'com.github.ben-manes.caffeine:caffeine:2.6.1'
+    compile 'com.zaxxer:HikariCP:2.7.6'
+    compile 'org.slf4j:slf4j-simple:1.7.22'
 }
 
 flyway {
